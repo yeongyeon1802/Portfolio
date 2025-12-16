@@ -6,3 +6,472 @@
   font-weight: normal;
   font-display: swap;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+/* 글꼴 크기 및 행간, 폰트 설정 */
+h1 {
+  font-size: 2rem;
+  font-family: "SchoolSafetyPoster";
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-family: noto-sans;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: "Pretendard";
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+}
+
+span {
+  font-size: 0.75rem;
+  font-family: noto-sans;
+  font-weight: 500;
+}
+
+/* 중복 속성 미리 정의하기 */
+
+header,
+section,
+footer {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* 전체 컨테이너 크기(모바일 우선 접근법 사용) */
+.whole-container {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #d6e6f5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 이름 영역 크기 */
+.name-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8ec;
+}
+
+.my-job {
+  width: fit-content;
+  text-align: center;
+  background-color: #f5d6d7;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* 메인 컨텐츠(자기소개. 경험, 강점, 기술)영역 */
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 자기소개 영역 */
+.about-me-box {
+  background-color: #f8f8ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience-strength-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* 모바일 사이즈가 되면 강점 영역이 아래로 떨어지게 하기 위한 반응형 설계 */
+.experience-container,
+.strength-container {
+  flex-basis: 100%;
+  background-color: #f8f8ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience-box,
+.strength-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience-detail-box,
+.strength-detail {
+  width: fit-content;
+  height: fit-content;
+  background-color: #f5d6d7;
+  border-radius: 2rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+}
+
+/* 기술 영역 */
+.skills-container {
+  background-color: #f8f8ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.frontend-skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* pc는 기술 영역에 마우스를 올리면 글씨가 사라지고 아이콘이 보이는 식으로 하기 위한 반응형 설계 */
+.frontend-skills-item {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #d6e6f5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frontend-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.design-skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* 디자인 기술 영역도 마찬가지 */
+.design-skills-item {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #f5d6d7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 피그마 아이콘은 사이즈 달라서 따로 클래스 줬음, 후술할 예정 */
+.design-image,
+.figma-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.skills-text {
+  text-align: center;
+  opacity: 0;
+}
+
+/* 피그마 아이콘은 원래 사이즈가 달라서 따로 클래스를 주고 크기 조정 */
+.figma-icon {
+  width: 1rem;
+  height: 1.5rem;
+}
+
+/* 나머지 아이콘은 동일하게 설정 */
+.frontend-image,
+.design-image {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* 연락처 영역 */
+.contact-box {
+  background-color: #f8f8ec;
+}
+
+.contact-list,
+.contact-item {
+  display: flex;
+}
+
+.contact-list {
+  justify-content: space-evenly;
+}
+
+.contact-item {
+  gap: 0.25rem;
+}
+
+/* 이 이미지는 따로 클래스 줄 필요가 없어보여서 자손 img 태그에다 주는 방식으로 했는데,
+혹시 클래스 줘야한다면 수정하겠습니다. */
+.contact-item img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.contact-info {
+  font-size: 0.75rem;
+}
+
+/* 태블릿 사이즈 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 3rem;
+    font-family: "SchoolSafetyPoster";
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6875rem;
+    line-height: 1.6875rem;
+    font-family: noto-sans;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: "Pretendard";
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.3125rem;
+    line-height: 1.3125rem;
+    font-family: "Pretendard";
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1.3125rem;
+    line-height: 1.5rem;
+    font-family: "Pretendard";
+    font-weight: 500;
+  }
+
+  span {
+    font-size: 1.125rem;
+    font-family: noto-sans;
+    font-weight: 500;
+  }
+
+  header,
+  section,
+  footer {
+    border-radius: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .whole-container {
+    max-width: 960px;
+    padding: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .my-job {
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+
+  .main-content-container {
+    gap: 0.75rem;
+  }
+
+  .experience-strength-wrap {
+    gap: 0.75rem;
+  }
+
+  /* 태블릿은 경험,강점 영역 1줄에 2개 보이기 */
+  .experience-container,
+  .strength-container {
+    flex-basis: calc(50% - 0.375rem);
+    gap: 1rem;
+  }
+
+  .experience-box,
+  .strength-box {
+    gap: 1rem;
+  }
+
+  .experience-detail-box,
+  .strength-detail {
+    border-radius: 4rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .frontend-skills-item,
+  .design-skills-item {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+
+  .skills-text {
+    opacity: 1;
+  }
+
+  .skills-icon {
+    opacity: 0;
+  }
+}
+
+/* pc 사이즈 */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+    font-family: "SchoolSafetyPoster";
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    font-family: noto-sans;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-family: "Pretendard";
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    font-family: "Pretendard";
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-family: "Pretendard";
+    font-weight: 500;
+  }
+
+  span {
+    font-size: 1.5rem;
+    font-family: noto-sans;
+    font-weight: 500;
+  }
+
+  header,
+  section,
+  footer {
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+
+  .whole-container {
+    max-width: 1280px;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .my-job {
+    border-radius: 3rem;
+    padding: 1.5rem;
+  }
+
+  .main-content-container {
+    gap: 1rem;
+  }
+
+  .experience-strength-wrap {
+    gap: 1rem;
+  }
+
+  /* pc는 경험,강점 영역 1줄에 2개 보이기 */
+  .experience-container,
+  .strength-container {
+    flex-basis: calc(50% - 0.5rem);
+    gap: 1.5rem;
+  }
+
+  .experience-box,
+  .strength-box {
+    gap: 1.5rem;
+  }
+
+  .experience-detail-box,
+  .strength-detail {
+    border-radius: 6rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .frontend-skills-item,
+  .design-skills-item {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .skills-text {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .skills-icon {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .frontend-image,
+  .design-image {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .figma-icon {
+    width: 2rem;
+    height: 3rem;
+  }
+
+  .frontend-skills-item:hover .skills-text,
+  .design-skills-item:hover .skills-text {
+    opacity: 0;
+  }
+
+  .frontend-skills-item:hover .skills-icon,
+  .design-skills-item:hover .skills-icon {
+    opacity: 1;
+  }
+
+  .contact-info {
+    font-size: 2.25rem;
+  }
+}

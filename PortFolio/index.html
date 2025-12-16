@@ -10,11 +10,11 @@
   <body>
     <!-- 전체 컨텐츠 감싸는 박스 -->
     <div class="whole-container">
-      <!-- 이름을 표시하는 헤더 영역, 사진은 없어도 괜찮다면 지울 예정이라 따로 안했음 -->
+      <!-- 이름을 표시하는 헤더 영역, 사진은 없어도 괜찮다면 지울 예정이라 따로 안했습니다 -->
       <header class="name-box">
         <!-- 이름 영역 -->
-        <h1 class="my-name">LEE YEONG YEON</h1>
-        <p class="my-job">Web Frontend Developer</p>
+        <h1 class="my-name">LEE<br />YEONG YEON</h1>
+        <h2 class="my-job">Web Frontend Developer</h2>
       </header>
       <!-- 자기소개,경험,강점,기술 영역을 감싸는 메인 영역 -->
       <main class="main-content-container">
@@ -28,15 +28,13 @@
             올라가며 성공적인 서비스를 만들어 갈 수 있을까? 를 중점에 두고 있습니다.
           </p>
         </section>
-        <!-- 경험 영역과 강점 영역은 모바일은 1줄에 하나씩 보이게 할 예정이라 두 영역을 감싸는 박스 만들기 -->
+        <!-- 경험 영역 : 경험 영역과 강점 영역은 pc와 태블릿에서는 1줄에 2개 보이는 방식으로 할 예정 -->
         <div class="experience-strength-wrap">
-          <!-- 경험 영역 -->
           <section class="experience-container">
             <h2 class="experience-title">experience</h2>
             <div class="experience-box">
-              <!-- 경험 주체와 경험 세부사항을 감싸는 박스 -->
               <div class="experience-detail-box">
-                <h3 class="experience-detail">프론트엔드 개발자,웹디자이너 교육 과정</h3>
+                <h3 class="experience-detail">프론트엔드 개발자, 웹디자이너 교육 과정</h3>
                 <h4 class="experience-detail-date">sbs컴퓨터학원 / 2023 ~ 2025</h4>
               </div>
               <p class="experience-description">
@@ -45,14 +43,14 @@
               </p>
             </div>
             <div class="experience-box">
-              <!-- 경험 주체와 경험 세부사항을 감싸는 박스 -->
               <div class="experience-detail-box">
                 <h3 class="experience-detail">오르미 프론트엔드 부트캠프</h3>
                 <h4 class="experience-detail-date">ESTsoft / 2025 ~ 2026</h4>
               </div>
               <p class="experience-description">
-                ESTsoft 회사에서 주관하는 프론트엔드 부트캠프에 심화 지식을 습득하고 있습니다. 현재는 시맨틱 마크업 언어, 반응형 CSS 구현 까지 할 수 있는
-                수준입니다. 현재 진행 중인 교육과정으로 앞으로 Jquery, React, TypeScript 등등의 지식을 습득하여 프론트엔드 개발자로서 성장해 나아갈 예정입니다.
+                ESTsoft 회사에서 주관하는 프론트엔드 부트캠프에 심화 지식을 습득하고 있습니다. 현재는 시맨틱 마크업 언어, 반응형 CSS 및 애니메이션 구현 까지 할
+                수 있는 수준입니다. 현재 진행 중인 교육과정으로 앞으로 Jquery, React, TypeScript 등등의 지식을 습득하여 프론트엔드 개발자로서 성장해 나아갈
+                예정입니다.
               </p>
             </div>
           </section>
@@ -63,9 +61,9 @@
               <h3 class="strength-detail">클린 코드 작성</h3>
               <p class="strength-description">
                 코드를 작성할 때 나만이 알아보고 수정하기 쉬운 코드가 아닌 시맨틱 태그 사용, 의미 있는 클래스 이름 정하기, 맥락파악이 힘들 것 같으면 주석도
-                붙이기 등등을 활용하여 동료도 쉽게 맥락 파악이 가능한 코드를 작성하는 것을 항상 염두에 두고 있습니다. 또한, 사용자 접근성, 가독성 향상
-                및 SEO(검색 엔진 최적화)를 위해서도 무분별한 div를 사용하는 것 대신 적절한 시맨틱 태그 활용은 필수라고 생각하기에 이 부분을 항상 중점에 두고
-                코드를 작성하고 있습니다.
+                붙이기 등등을 활용하여 동료도 쉽게 맥락 파악이 가능한 코드를 작성하는 것을 항상 염두에 두고 있습니다. 또한, 사용자 접근성, 가독 성 향상
+                및 SEO(검색 엔진 최적화)를 위해서도 무분별한 &lt;div&gt;태그를 사용하는 것 대신 적절한 시맨틱 태그 활용은 필수라고 생각하기에 이 부분을 항상
+                중점에 두고 코드를 작성하고 있습니다.
               </p>
             </div>
             <div class="strength-box">
@@ -78,34 +76,34 @@
             </div>
           </section>
         </div>
-        <!-- 기술 영역 - 모바일은 아이콘 출력, 태블릿은 글자, pc는 평소엔 글씨로 보이다가 마우스 호버시 아이콘이 보이게 할 예정 -->
+        <!-- 기술 영역 -->
         <section class="skills-container">
-          <h2 class="skills-list"></h2>
+          <h2 class="skills-list">skills</h2>
           <!-- 프론트엔드 기술 영역 -->
           <div class="frontend-skills-box">
             <ul class="frontend-skills-list">
               <li class="frontend-skills-item">
                 <span class="skills-text">HTML</span>
                 <span class="skills-icon">
-                  <img src="images/HTML.png" alt="HTML image" class="frontend-icon" />
+                  <img src="images/HTML.png" alt="HTML 아이콘" class="frontend-image" />
                 </span>
               </li>
               <li class="frontend-skills-item">
                 <span class="skills-text">CSS</span>
                 <span class="skills-icon">
-                  <img src="images/CSS.png" alt="CSS image" class="frontend-icon" />
+                  <img src="images/CSS.png" alt="CSS 아이콘" class="frontend-image" />
                 </span>
               </li>
               <li class="frontend-skills-item">
                 <span class="skills-text">JavaScript</span>
                 <span class="skills-icon">
-                  <img src="images/JavaScript.png" alt="JavaScript image" class="frontend-icon" />
+                  <img src="images/JavaScript.png" alt="JavaScript 아이콘" class="frontend-image" />
                 </span>
               </li>
               <li class="frontend-skills-item">
                 <span class="skills-text">GitHub</span>
                 <span class="skills-icon">
-                  <img src="images/GitHub.png" alt="GitHub image" class="frontend-icon" />
+                  <img src="images/GitHub.png" alt="GitHub 아이콘" class="frontend-image" />
                 </span>
               </li>
             </ul>
@@ -116,20 +114,19 @@
               <li class="design-skills-item">
                 <span class="skills-text">Figma</span>
                 <span class="skills-icon">
-                  <!-- 피그마 아이콘은 크기가 다른 아이콘들과 달라서 클래스명을 다르게 줌 -->
-                  <img src="images/Figma.png" alt="Figma image" class="figma-icon" />
+                  <img src="images/Figma.png" alt="Figma 아이콘" class="figma-icon" />
                 </span>
               </li>
               <li class="design-skills-item">
                 <span class="skills-text">Adobe<br />Photoshop</span>
                 <span class="skills-icon">
-                  <img src="images/Photoshop.png" alt="Photoshop image" class="design-icon" />
+                  <img src="images/Photoshop.png" alt="Photoshop 아이콘" class="design-image" />
                 </span>
               </li>
               <li class="design-skills-item">
                 <span class="skills-text">Adobe<br />Illustrator</span>
                 <span class="skills-icon">
-                  <img src="images/Illustrator.png" alt="Illustrator image" class="design-icon" />
+                  <img src="images/Illustrator.png" alt="Illustrator 아이콘" class="design-image" />
                 </span>
               </li>
             </ul>
@@ -138,17 +135,18 @@
       </main>
       <!-- 연락처를 표시하는 푸터 영역 -->
       <footer class="contact-box">
+        <h2 class="contact-title">contact</h2>
         <ul class="contact-list">
           <li class="contact-item">
-            <img src="images/contact-email.png" alt="email contact" />
+            <img src="images/contact-email.png" alt="이메일 연락처 아이콘" />
             <span class="contact-info">aktld101@naver.com</span>
           </li>
           <li class="contact-item">
-            <img src="images/contact-GitHub.png" alt="github contact" />
+            <img src="images/contact-GitHub.png" alt="깃허브 주소 아이콘" />
             <span class="contact-info">github.com/yeongyeon1802</span>
           </li>
           <li class="contact-item">
-            <img src="images/contact-mobile.png" alt="mobile contact" />
+            <img src="images/contact-mobile.png" alt="전화번호 아이콘" />
             <span class="contact-info">010-0000-0000</span>
           </li>
         </ul>
