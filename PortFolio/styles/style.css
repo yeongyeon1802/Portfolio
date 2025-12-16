@@ -117,7 +117,7 @@ footer {
   background-color: #f8f8ec;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 0.75vw, 1.5rem);
 }
 
 .experience-box,
@@ -190,7 +190,8 @@ footer {
 }
 
 /* 피그마 아이콘은 사이즈 달라서 따로 클래스 줬음, 후술할 예정 */
-.design-image,
+.frontend-icon,
+.design-icon,
 .figma-icon {
   position: absolute;
   top: 50%;
@@ -211,8 +212,8 @@ footer {
 }
 
 /* 나머지 아이콘은 동일하게 설정 */
-.frontend-image,
-.design-image {
+.frontend-icon,
+.design-icon {
   width: clamp(1.5rem, 3vw, 4.5rem);
   height: clamp(1.5rem, 3vw, 4.5rem);
 }
