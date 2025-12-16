@@ -23,31 +23,36 @@
           <h2 class="about-me"></h2>
           <p class="about-me-description"></p>
         </section>
-        <!-- 경험 영역 -->
-        <section class="experience-container">
-          <h2 class="experience-title"></h2>
-          <div class="experience-box">
-            <h3 class="experience-detail"></h3>
-            <p class="experience-description"></p>
-          </div>
-          <div class="experience-box">
-            <h3 class="experience-detail"></h3>
-            <p class="experience-description"></p>
-          </div>
-        </section>
-        <!-- 강점 영역 -->
-        <section class="strength-container">
-          <h2 class="strength-title"></h2>
-          <div class="strength-box">
-            <h3 class="strength-detail"></h3>
-            <p class="strength-description"></p>
-          </div>
-          <div class="strength-box">
-            <h3 class="strength-detail"></h3>
-            <p class="strength-description"></p>
-          </div>
-        </section>
-        <!-- 기술 영역 -->
+        <!-- 경험 영역과 강점 영역은 모바일은 1줄에 하나씩 보이게 할 예정이라 두 영역을 감싸는 박스 만들기 -->
+        <div class="experience-strength-wrap">
+          <!-- 경험 영역 -->
+          <section class="experience-container">
+            <h2 class="experience-title"></h2>
+            <div class="experience-box">
+              <h3 class="experience-detail"></h3>
+              <h4 class="experience-detail-date"></h4>
+              <p class="experience-description"></p>
+            </div>
+            <div class="experience-box">
+              <h3 class="experience-detail"></h3>
+              <h4 class="experience-detail-date"></h4>
+              <p class="experience-description"></p>
+            </div>
+          </section>
+          <!-- 강점 영역 -->
+          <section class="strength-container">
+            <h2 class="strength-title"></h2>
+            <div class="strength-box">
+              <h3 class="strength-detail"></h3>
+              <p class="strength-description"></p>
+            </div>
+            <div class="strength-box">
+              <h3 class="strength-detail"></h3>
+              <p class="strength-description"></p>
+            </div>
+          </section>
+        </div>
+        <!-- 기술 영역 - 모바일은 아이콘 출력, 태블릿 및 pc는 글자가 출력되게 할 예정 -->
         <section class="skills-container">
           <h2 class="skills-list"></h2>
           <!-- 프론트엔드 기술 영역 -->
