@@ -85,7 +85,7 @@ footer {
   width: fit-content;
   text-align: center;
   background-color: #f5d6d7;
-  border-radius: clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(2rem, 4vw, 6rem);
   padding: clamp(0.5rem, 1vw, 1.5rem);
 }
 
@@ -207,15 +207,15 @@ footer {
 
 /* 피그마 아이콘은 원래 사이즈가 달라서 따로 클래스를 주고 크기 조정 */
 .figma-icon {
-  width: clamp(1rem, 2vw, 3rem);
-  height: clamp(1.5rem, 3vw, 4.5rem);
+  width: clamp(1rem, 4vw, 3rem);
+  height: clamp(1.5rem, 6vw, 4.5rem);
 }
 
 /* 나머지 아이콘은 동일하게 설정 */
 .frontend-icon,
 .design-icon {
-  width: clamp(1.5rem, 3vw, 4.5rem);
-  height: clamp(1.5rem, 3vw, 4.5rem);
+  width: clamp(1.5rem, 6vw, 4.5rem);
+  height: clamp(1.5rem, 6vw, 4.5rem);
 }
 
 /* 연락처 영역 */
