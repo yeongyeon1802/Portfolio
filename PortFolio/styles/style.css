@@ -264,7 +264,6 @@ footer {
   .experience-container,
   .strength-container {
     flex-basis: calc(50% - 0.375rem);
-    gap: 1rem;
   }
 
   .skills-text {
@@ -298,7 +297,7 @@ footer {
 
   .frontend-skills-item:hover,
   .design-skills-item:hover {
-    transform: translate(5%, -5%);
+    transform: translate(0.25rem, -0.25rem);
     box-shadow: -0.25rem 0.25rem 0 #282a2a;
   }
 
