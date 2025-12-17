@@ -67,7 +67,7 @@ footer {
   background-color: #f8f8ec;
   width: 100%;
   border-radius: clamp(1rem, 1.5vw, 3rem);
-  padding: clamp(0.5rem, 1vw, 1.5rem);
+  padding: clamp(0.75rem, 1.125vw, 1.5rem);
 }
 
 /* 전체 컨테이너 크기(모바일 우선 접근법 사용) */
@@ -113,6 +113,13 @@ footer {
   gap: clamp(0.5rem, 1vw, 1.5rem);
 }
 
+.about-me-description {
+  /* 긴 단어가 컨테이너를 넘칠 때 줄바꿈을 유연하게 처리하는 속성 */
+  word-wrap: break-word;
+  /* 한국어 문맥에 맞게 어절 단위로 줄바꿈을 시도하는 속성 */
+  word-break: keep-all;
+}
+
 .experience-strength-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -143,6 +150,14 @@ footer {
   border-radius: clamp(2rem, 4vw, 6rem);
   padding: clamp(0.25rem, 0.5vw, 0.75rem) clamp(0.5rem, 1vw, 1.5rem);
   text-align: center;
+}
+
+.experience-description,
+.strength-description {
+  /* 긴 단어가 컨테이너를 넘칠 때 줄바꿈을 유연하게 처리하는 속성 */
+  word-wrap: break-word;
+  /* 한국어 문맥에 맞게 어절 단위로 줄바꿈을 시도하는 속성 */
+  word-break: keep-all;
 }
 
 /* 기술 영역 */
@@ -297,6 +312,7 @@ footer {
 
   .frontend-skills-item:hover,
   .design-skills-item:hover {
+    cursor: pointer;
     transform: translate(0.25rem, -0.25rem);
     box-shadow: -0.25rem 0.25rem 0 #282a2a;
   }
