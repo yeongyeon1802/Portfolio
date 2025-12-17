@@ -70,6 +70,11 @@ footer {
   padding: clamp(0.75rem, 1.125vw, 1.5rem);
 }
 
+/* 컨텐츠 외 전체 배경 색깔 */
+body {
+  background-color: #f5e5d6;
+}
+
 /* 전체 컨테이너 크기(모바일 우선 접근법 사용) */
 .whole-container {
   width: 100%;
@@ -96,7 +101,7 @@ footer {
   text-align: center;
   background-color: #f5d6d7;
   border-radius: clamp(1rem, 2vw, 3rem);
-  padding: clamp(0.5rem, 1vw, 1.5rem);
+  padding: clamp(0.3rem, 0.6vw, 0.9rem);
 }
 
 /* 메인 컨텐츠(자기소개. 경험, 강점, 기술)영역 */
