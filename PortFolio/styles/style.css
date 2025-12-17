@@ -50,13 +50,13 @@ p {
   font-size: clamp(0.875rem, 1.5vw, 2.625rem);
   line-height: 1.2;
   font-family: "Pretendard";
-  font-weight: 500;
+  font-weight: 400;
 }
 
 span {
   font-size: clamp(0.75rem, 1.5vw, 2.25rem);
   font-family: noto-sans;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* 중복 속성 미리 정의하기 */
