@@ -67,13 +67,19 @@ span {
 }
 
 /* 중복 속성 미리 정의하기 */
-
-section,
-footer {
+.name-box,
+.about-me-box,
+.experience-container,
+.strength-container,
+.skills-container,
+.contact-box {
   background-color: #f8f8ec;
   width: 100%;
   border-radius: clamp(1rem, 1.5vw, 3rem);
   padding: clamp(1rem, 2vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 /* 컨텐츠 외 전체 배경 색깔 */
@@ -96,15 +102,9 @@ body {
 
 /* 이름 영역 크기 */
 .name-box {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f8f8ec;
-  width: 100%;
-  border-radius: clamp(1rem, 1.5vw, 3rem);
-  gap: clamp(0.6rem, 1.2vw, 1.8rem);
-  padding: clamp(1.5rem, 3vw, 4.5rem) clamp(1rem, 2vw, 3rem);
 }
 
 .my-job {
@@ -124,13 +124,6 @@ body {
 }
 
 /* 자기소개 영역 */
-.about-me-box {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.6rem, 1.2vw, 1.8rem);
-  background-color: #f8f8ec;
-}
-
 /* 제목과 문단에 구분선 표시 */
 .about-me-box > :first-child:after {
   content: "";
@@ -157,9 +150,6 @@ body {
 .experience-container,
 .strength-container {
   flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 /* 제목 및 각 문단마다 구분선 표시 */
@@ -190,12 +180,6 @@ body {
 }
 
 /* 기술 영역 */
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.6rem, 1.2vw, 1.8rem);
-}
-
 /* 제목과 문단에 구분선 표시 */
 .skills-container > :first-child::after {
   content: "";
@@ -283,12 +267,6 @@ body {
 }
 
 /* 연락처 영역 */
-.contact-box {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.6rem, 1.2vw, 1.8rem);
-}
-
 /* 제목과 문단에 구분선 표시 */
 .contact-box > :not(:last-child)::after {
   content: "";
@@ -334,6 +312,7 @@ body {
     max-width: 960px;
   }
 
+  /* 균일하게 너비를 가지게 하기 */
   .experience-container,
   .strength-container {
     flex: 1;
@@ -342,20 +321,14 @@ body {
 
 /* pc 사이즈 */
 @media (min-width: 1025px) {
-  /* 전체 컨텐츠 기본색 및 애니메이션 사전 설정 */
-  header,
-  section,
-  footer {
-    background-color: #f8f8ec;
-  }
-
-  /* 마우스 호버 시 부여할 애니메이션 속성 추가 */
+  /* 전체 컨텐츠 기본 배경색 설정 및 마우스 호버 시 부여할 애니메이션 속성 추가 */
   .name-box,
   .about-me-box,
   .experience-container,
   .strength-container,
   .skills-container,
   .contact-box {
+    background-color: #f8f8ec;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
 
@@ -375,39 +348,41 @@ body {
     background-color: #eef2ff;
   }
 
-  .whole-container {
-    max-width: 1280px;
-  }
-
-  /* 마우스 호버 시 배경색 변경 */
   .about-me-box:hover {
     background-color: #e0f2f1;
   }
 
-  .experience-container,
-  .strength-container {
-    flex: 1;
-  }
-
-  /* 마우스 호버 시 배경색 변경 */
   .experience-container:hover {
     background-color: #e8eaf6;
   }
 
-  /* 마우스 호버 시 배경색 변경 */
   .strength-container:hover {
     background-color: #fff9db;
+  }
+
+  .skills-container:hover {
+    background-color: #f1f8e9;
+  }
+
+  .contact-box:hover {
+    background-color: #efebe9;
+  }
+
+  /* 최대 컨텐츠 크기 */
+  .whole-container {
+    max-width: 1280px;
+  }
+
+  /* 균일하게 너비를 가지게 하기 */
+  .experience-container,
+  .strength-container {
+    flex: 1;
   }
 
   /* 마우스 호버 시 스킬 영역 아이템 살짝 오른쪽 위로 이동 및 그림자 효과 주는 애니메이션 */
   .frontend-skills-item,
   .design-skills-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  /* 마우스 호버 시 배경색 변경 */
-  .skills-container:hover {
-    background-color: #f1f8e9;
   }
 
   /* 마우스 호버 시 스킬 아이템 왼쪽 위로 뜨는 애니메이션 */
@@ -435,10 +410,5 @@ body {
   .frontend-skills-item:hover .skills-icon,
   .design-skills-item:hover .skills-icon {
     opacity: 0;
-  }
-
-  /* 마우스 호버 시 배경색 변경 */
-  .contact-box:hover {
-    background-color: #efebe9;
   }
 }
