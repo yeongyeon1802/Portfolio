@@ -451,6 +451,8 @@ body {
 
   /* 최대 컨텐츠 크기 */
   .whole-container {
+    border-left: 1px solid #282a2a;
+    border-right: 1px solid #282a2a;
     max-width: 1280px;
   }
 
