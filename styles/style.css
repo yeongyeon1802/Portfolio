@@ -24,7 +24,7 @@ p {
 
 /* 글꼴 크기 및 행간, 폰트 설정, 뷰포트에 따라 폰트 사이즈 조절 */
 h1 {
-  font-size: clamp(1.5rem, 4vw, 6rem);
+  font-size: clamp(1.2rem, 4vw, 6rem);
   font-family: "SchoolSafetyPoster", noto-sans, sans-serif;
   text-align: center;
 }
