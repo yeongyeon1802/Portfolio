@@ -24,33 +24,33 @@ p {
 
 /* 글꼴 크기 및 행간, 폰트 설정, 뷰포트에 따라 폰트 사이즈 조절 */
 h1 {
-  font-size: clamp(1.2rem, 4vw, 6rem);
+  font-size: clamp(24px, 4vw, 6rem);
   font-family: "SchoolSafetyPoster", noto-sans, sans-serif;
   text-align: center;
 }
 
 h2 {
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: clamp(16px, 2vw, 3rem);
   font-family: noto-sans, sans-serif;
   text-align: center;
 }
 
 h3 {
-  font-size: clamp(0.9rem, 1.4vw, 2.4rem);
+  font-size: clamp(14px, 1.4vw, 2.4rem);
   line-height: 1.2;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-weight: 600;
 }
 
 h4 {
-  font-size: clamp(0.9rem, 1.4vw, 2.4rem);
+  font-size: clamp(14px, 1.4vw, 2.4rem);
   line-height: 1.2;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-weight: 500;
 }
 
 p {
-  font-size: clamp(0.9rem, 1.4vw, 2.4rem);
+  font-size: clamp(14px, 1.4vw, 2.4rem);
   line-height: 1.4;
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-weight: 400;
@@ -61,7 +61,7 @@ p {
 }
 
 span {
-  font-size: clamp(0.9rem, 1.5vw, 2.25rem);
+  font-size: clamp(14px, 1.5vw, 2.25rem);
   font-family: noto-sans, sans-serif;
   font-weight: 400;
 }
@@ -73,13 +73,13 @@ span {
 .strength-container,
 .skills-container,
 .contact-box {
-  background-color: #f8f8ec;
   width: 100%;
-  border-radius: clamp(1rem, 1.5vw, 3rem);
-  padding: clamp(1rem, 2vw, 3rem);
   display: flex;
   flex-direction: column;
+  border-radius: clamp(1rem, 1.5vw, 3rem);
+  padding: clamp(1rem, 2vw, 3rem);
   gap: clamp(0.6rem, 1.2vw, 1.8rem);
+  background-color: #f8f8ec;
 }
 
 /* 컨텐츠 외 전체 배경 색깔 */
@@ -91,29 +91,30 @@ body {
 .whole-container {
   width: 100%;
   height: 100%;
-  padding: clamp(1rem, 2vw, 3rem);
   box-sizing: border-box;
-  margin: 0 auto;
-  background-color: #d6e6f5;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 3rem);
   gap: clamp(1rem, 2vw, 3rem);
+  background-color: #d6e6f5;
 }
 
 /* 이름 영역 크기 */
 .name-box {
   justify-content: center;
   align-items: center;
+  padding: clamp(1.5rem, 3vw, 4.5rem);
   background-color: #eef2ff;
 }
 
 .my-job {
   width: fit-content;
   text-align: center;
-  background-color: #f5d6d7;
   border-radius: clamp(1rem, 2vw, 3rem);
   padding: clamp(0.15rem, 0.3vw, 0.45rem) clamp(0.5rem, 1vw, 1.5rem);
   font-size: clamp(0.75rem, 1.5vw, 2.25rem);
+  background-color: #f5d6d7;
 }
 
 /* 메인 컨텐츠(자기소개. 경험, 강점, 기술)영역 */
@@ -129,12 +130,12 @@ body {
 }
 
 /* 제목과 문단에 구분선 표시 */
-.about-me-box > :first-child:after {
+.about-me-box > :last-child::before {
   content: "";
   display: block;
   width: 100%;
   border-top: 1px dashed #4d4d4d;
-  margin-top: clamp(0.5rem, 1vw, 1.5rem);
+  margin-bottom: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 .about-me-description {
@@ -165,19 +166,20 @@ body {
 }
 
 /* 제목 및 각 문단마다 구분선 표시 */
-.experience-container > :not(:last-child)::after,
-.strength-container > :not(:last-child)::after {
+.experience-container > :not(:first-child)::before,
+.strength-container > :not(:first-child)::before {
   content: "";
   display: block;
   width: 100%;
   border-top: 1px dashed #4d4d4d;
-  margin-top: clamp(0.5rem, 1vw, 1.5rem);
+  margin-bottom: clamp(0.3rem, 0.6vw, 0.9rem);
 }
 
 .experience-box,
 .strength-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: clamp(0.5rem, 1vw, 1.5rem);
 }
 
@@ -185,9 +187,9 @@ body {
 .strength-detail {
   width: fit-content;
   height: fit-content;
-  background-color: #f5d6d7;
   border-radius: clamp(2rem, 4vw, 6rem);
-  padding: clamp(0.25rem, 0.5vw, 0.75rem) clamp(1rem, 2vw, 3rem);
+  padding: clamp(0.2rem, 0.4vw, 0.6rem) clamp(1rem, 2vw, 3rem);
+  background-color: #f5d6d7;
   text-align: center;
 }
 
@@ -197,12 +199,20 @@ body {
 }
 
 /* 제목과 문단에 구분선 표시 */
-.skills-container > :first-child::after {
+.skills-container > :nth-child(2):before {
   content: "";
   display: block;
   width: 100%;
   border-top: 1px dashed #4d4d4d;
-  margin-top: clamp(0.5rem, 1vw, 1.5rem);
+  margin-bottom: clamp(0.6rem, 1.2vw, 1.8rem);
+}
+
+.skills-container > :nth-child(2):after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 1px dashed #4d4d4d;
+  margin-top: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 .frontend-skills-list {
@@ -219,12 +229,12 @@ body {
   position: relative;
   width: clamp(4.5rem, 10vw, 13.5rem);
   height: clamp(4.5rem, 10vw, 13.5rem);
-  background-color: #d6e6f5;
   border-radius: 50%;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
+  background-color: #d6e6f5;
 }
 
 .design-skills-box {
@@ -234,8 +244,8 @@ body {
 .design-skills-list {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
   padding: clamp(0.5rem, 1vw, 1.5rem);
   gap: clamp(0.5rem, 1vw, 1.5rem);
 }
@@ -245,12 +255,12 @@ body {
   position: relative;
   width: clamp(4.5rem, 10vw, 13.5rem);
   height: clamp(4.5rem, 10vw, 13.5rem);
-  background-color: #f5d6d7;
   border-radius: 50%;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
+  background-color: #f5d6d7;
 }
 
 /* 피그마 아이콘은 사이즈 달라서 따로 클래스 줬음, 후술할 예정 */
@@ -288,12 +298,12 @@ body {
 }
 
 /* 제목과 문단에 구분선 표시 */
-.contact-box > :not(:last-child)::after {
+.contact-box > :not(:first-child)::before {
   content: "";
   display: block;
   width: 100%;
   border-top: 1px dashed #4d4d4d;
-  margin-top: clamp(0.5rem, 1vw, 1.5rem);
+  margin-bottom: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 .contact-list,
@@ -312,8 +322,6 @@ body {
   gap: clamp(0.25rem, 0.5vw, 0.75rem);
 }
 
-/* 이 이미지는 따로 클래스를 주는 의미가 없어보여서 자손 img 태그에다 주는 방식으로 했는데,
-혹시 클래스 줘야한다면 수정하겠습니다. */
 .contact-item img {
   width: clamp(1.5rem, 3vw, 4.5rem);
   height: clamp(1.5rem, 3vw, 4.5rem);
@@ -321,18 +329,13 @@ body {
 
 .contact-info {
   text-align: center;
-  font-size: clamp(0.9rem, 1.8vw, 2.7rem);
   display: flex;
   align-items: center;
+  font-size: clamp(0.9rem, 1.8vw, 2.7rem);
 }
 
 /* 태블릿 사이즈 */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .whole-container {
-    max-width: 960px;
-  }
-
-  /* 균일하게 너비를 가지게 하기 */
   .experience-container,
   .strength-container {
     flex: 1;
@@ -361,6 +364,29 @@ body {
   .contact-box:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0 0.25rem 0 #4d4d4d;
+  }
+
+  .my-name,
+  .about-me,
+  .experience-title,
+  .strength-title,
+  .skills-list,
+  .contact-title {
+    display: block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+
+  .name-box:hover .my-name {
+    transform: scale(1.05);
+  }
+
+  .about-me-box:hover .about-me,
+  .experience-container:hover .experience-title,
+  .strength-container:hover .strength-title,
+  .skills-container:hover .skills-list,
+  .contact-box:hover .contact-title {
+    transform: scale(1.1);
   }
 
   /* 마우스 호버 시 배경색 변경 */
@@ -408,9 +434,9 @@ body {
   /* 마우스 호버 시 스킬 아이템 왼쪽 위로 뜨는 애니메이션 */
   .frontend-skills-item:hover,
   .design-skills-item:hover {
-    cursor: pointer;
     transform: translate(-0.25rem, -0.25rem);
     box-shadow: 0.25rem 0.25rem 0 #4d4d4d;
+    cursor: pointer;
   }
 
   /* 마우스 호버 시 글씨가 사라지고 아이콘이 나타나는 애니메이션 */
