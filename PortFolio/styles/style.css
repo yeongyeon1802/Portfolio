@@ -347,7 +347,27 @@ body {
   section,
   footer {
     background-color: #f8f8ec;
-    transition: background-color 0.3s ease;
+  }
+
+  /* 마우스 호버 시 부여할 애니메이션 속성 추가 */
+  .name-box,
+  .about-me-box,
+  .experience-container,
+  .strength-container,
+  .skills-container,
+  .contact-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* 마우스 호버 시 살짝 위로 뜨는 효과 */
+  .name-box:hover,
+  .about-me-box:hover,
+  .experience-container:hover,
+  .strength-container:hover,
+  .skills-container:hover,
+  .contact-box:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.25rem 0 #4d4d4d;
   }
 
   /* 마우스 호버 시 배경색 변경 */
@@ -359,32 +379,9 @@ body {
     max-width: 1280px;
   }
 
-  .about-me-box {
-    background-color: #f8f8ec;
-  }
-
   /* 마우스 호버 시 배경색 변경 */
   .about-me-box:hover {
     background-color: #e0f2f1;
-  }
-
-  .name-box,
-  .about-me-box,
-  .experience-container,
-  .strength-container,
-  .skills-container,
-  .contact-box {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .name-box:hover,
-  .about-me-box:hover,
-  .experience-container:hover,
-  .strength-container:hover,
-  .skills-container:hover,
-  .contact-box:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 0.25rem 0 #4d4d4d;
   }
 
   .experience-container,
@@ -413,6 +410,7 @@ body {
     background-color: #f1f8e9;
   }
 
+  /* 마우스 호버 시 스킬 아이템 왼쪽 위로 뜨는 애니메이션 */
   .frontend-skills-item:hover,
   .design-skills-item:hover {
     cursor: pointer;
