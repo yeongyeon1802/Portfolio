@@ -14,43 +14,45 @@ h1,
 h2,
 h3,
 h4,
-p,
 span {
   color: #282a2a;
+}
+
+p {
+  color: #4d4d4d;
 }
 
 /* 글꼴 크기 및 행간, 폰트 설정, 뷰포트에 따라 폰트 사이즈 조절 */
 h1 {
   font-size: clamp(1.5rem, 4vw, 6rem);
-  font-family: "SchoolSafetyPoster";
+  font-family: "SchoolSafetyPoster", noto-sans, sans-serif;
   text-align: center;
 }
 
 h2 {
   font-size: clamp(1rem, 2vw, 3rem);
-  line-height: 1;
-  font-family: noto-sans;
+  font-family: noto-sans, sans-serif;
   text-align: center;
 }
 
 h3 {
   font-size: clamp(0.9rem, 1.4vw, 2.4rem);
   line-height: 1.2;
-  font-family: "Pretendard";
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-weight: 600;
 }
 
 h4 {
   font-size: clamp(0.9rem, 1.4vw, 2.4rem);
   line-height: 1.2;
-  font-family: "Pretendard";
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-weight: 500;
 }
 
 p {
   font-size: clamp(0.9rem, 1.4vw, 2.4rem);
-  line-height: 1.2;
-  font-family: "Pretendard";
+  line-height: 1.4;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
   font-weight: 400;
   /* 긴 단어가 컨테이너를 넘칠 때 줄바꿈을 유연하게 처리하는 속성 */
   word-wrap: break-word;
@@ -60,29 +62,18 @@ p {
 
 span {
   font-size: clamp(0.9rem, 1.5vw, 2.25rem);
-  font-family: noto-sans;
+  font-family: noto-sans, sans-serif;
   font-weight: 400;
 }
 
 /* 중복 속성 미리 정의하기 */
 
-header,
 section,
 footer {
   background-color: #f8f8ec;
   width: 100%;
   border-radius: clamp(1rem, 1.5vw, 3rem);
   padding: clamp(1rem, 2vw, 3rem);
-  transition: background-color 0.3s ease;
-}
-
-/* 마우스 호버 시 각 영역 배경색 변경, 섹션 영역은 각각 줄거라 여기서 설정 안했음 */
-header:hover {
-  background-color: #eef2ff;
-}
-
-footer:hover {
-  background-color: #efebe9;
 }
 
 /* 컨텐츠 외 전체 배경 색깔 */
@@ -109,7 +100,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.4rem, 0.8vw, 1.2rem);
+  background-color: #f8f8ec;
+  width: 100%;
+  border-radius: clamp(1rem, 1.5vw, 3rem);
+  gap: clamp(0.6rem, 1.2vw, 1.8rem);
+  padding: clamp(1.5rem, 3vw, 4.5rem) clamp(1rem, 2vw, 3rem);
 }
 
 .my-job {
@@ -117,7 +112,7 @@ body {
   text-align: center;
   background-color: #f5d6d7;
   border-radius: clamp(1rem, 2vw, 3rem);
-  padding: clamp(0.3rem, 0.6vw, 0.9rem) clamp(0.5rem, 1vw, 1.5rem);
+  padding: clamp(0.15rem, 0.3vw, 0.45rem) clamp(0.5rem, 1vw, 1.5rem);
   font-size: clamp(0.75rem, 1.5vw, 2.25rem);
 }
 
@@ -125,7 +120,7 @@ body {
 .main-content-container {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 1vw, 1.5rem);
+  gap: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 /* 자기소개 영역 */
@@ -133,22 +128,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: clamp(0.6rem, 1.2vw, 1.8rem);
-  background-color: #f2f2f2;
+  background-color: #f8f8ec;
 }
 
 /* 제목과 문단에 구분선 표시 */
-.about-me-box > :nth-child(2)::before {
+.about-me-box > :first-child:after {
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
-  background-color: #282a2a;
-  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
-}
-
-/* 마우스 호버 시 배경색 변경 */
-.about-me-box:hover {
-  background-color: #e0f2f1;
+  border-top: 1px dashed #4d4d4d;
+  margin-top: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .about-me-description {
@@ -161,7 +150,7 @@ body {
 .experience-strength-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(0.5rem, 1vw, 1.5rem);
+  gap: clamp(0.6rem, 1.2vw, 1.8rem);
 }
 
 /* 모바일 사이즈가 되면 강점 영역이 아래로 떨어지게 하기 위한 반응형 설계 */
@@ -174,14 +163,13 @@ body {
 }
 
 /* 제목 및 각 문단마다 구분선 표시 */
-.experience-container > *:not(:first-child)::before,
-.strength-container > *:not(:first-child)::before {
+.experience-container > :not(:last-child)::after,
+.strength-container > :not(:last-child)::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
-  background-color: #282a2a;
-  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  border-top: 1px dashed #4d4d4d;
+  margin-top: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .experience-box,
@@ -201,16 +189,6 @@ body {
   text-align: center;
 }
 
-/* 마우스 호버 시 배경색 변경 */
-.experience-container:hover {
-  background-color: #e8eaf6;
-}
-
-/* 마우스 호버 시 배경색 변경 */
-.strength-container:hover {
-  background-color: #fff9db;
-}
-
 /* 기술 영역 */
 .skills-container {
   display: flex;
@@ -219,13 +197,12 @@ body {
 }
 
 /* 제목과 문단에 구분선 표시 */
-.skills-container > :nth-child(2)::before {
+.skills-container > :first-child::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
-  background-color: #282a2a;
-  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  border-top: 1px dashed #4d4d4d;
+  margin-top: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .frontend-skills-list {
@@ -251,8 +228,6 @@ body {
 }
 
 .design-skills-box {
-  display: flex;
-  justify-content: center;
   padding: 0 12.5%;
 }
 
@@ -307,11 +282,6 @@ body {
   height: clamp(1.666rem, 3.333vw, 5rem);
 }
 
-/* 마우스 호버 시 배경색 변경 */
-.skills-container:hover {
-  background-color: #f1f8e9;
-}
-
 /* 연락처 영역 */
 .contact-box {
   display: flex;
@@ -320,13 +290,12 @@ body {
 }
 
 /* 제목과 문단에 구분선 표시 */
-.contact-box > :nth-child(2)::before {
+.contact-box > :not(:last-child)::after {
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
-  background-color: #282a2a;
-  margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
+  border-top: 1px dashed #4d4d4d;
+  margin-top: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .contact-list,
@@ -337,7 +306,7 @@ body {
 .contact-list {
   flex-direction: column;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  align-items: center;
   gap: clamp(0.75rem, 1.5vw, 2.25rem);
 }
 
@@ -365,18 +334,27 @@ body {
     max-width: 960px;
   }
 
-  .experience-strength-wrap {
-    gap: 0.75rem;
-  }
-
   .experience-container,
   .strength-container {
-    flex-basis: calc(50% - 0.375rem);
+    flex: 1;
   }
 }
 
 /* pc 사이즈 */
 @media (min-width: 1025px) {
+  /* 전체 컨텐츠 기본색 및 애니메이션 사전 설정 */
+  header,
+  section,
+  footer {
+    background-color: #f8f8ec;
+    transition: background-color 0.3s ease;
+  }
+
+  /* 마우스 호버 시 배경색 변경 */
+  .name-box:hover {
+    background-color: #eef2ff;
+  }
+
   .whole-container {
     max-width: 1280px;
   }
@@ -385,25 +363,61 @@ body {
     background-color: #f8f8ec;
   }
 
-  .experience-strength-wrap {
-    gap: 1rem;
+  /* 마우스 호버 시 배경색 변경 */
+  .about-me-box:hover {
+    background-color: #e0f2f1;
+  }
+
+  .name-box,
+  .about-me-box,
+  .experience-container,
+  .strength-container,
+  .skills-container,
+  .contact-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .name-box:hover,
+  .about-me-box:hover,
+  .experience-container:hover,
+  .strength-container:hover,
+  .skills-container:hover,
+  .contact-box:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.25rem 0 #4d4d4d;
   }
 
   .experience-container,
   .strength-container {
-    flex-basis: calc(50% - 0.5rem);
+    flex: 1;
   }
 
+  /* 마우스 호버 시 배경색 변경 */
+  .experience-container:hover {
+    background-color: #e8eaf6;
+  }
+
+  /* 마우스 호버 시 배경색 변경 */
+  .strength-container:hover {
+    background-color: #fff9db;
+  }
+
+  /* 마우스 호버 시 스킬 영역 아이템 살짝 오른쪽 위로 이동 및 그림자 효과 주는 애니메이션 */
   .frontend-skills-item,
   .design-skills-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
+  /* 마우스 호버 시 배경색 변경 */
+  .skills-container:hover {
+    background-color: #f1f8e9;
+  }
+
   .frontend-skills-item:hover,
   .design-skills-item:hover {
     cursor: pointer;
-    transform: translate(0.25rem, -0.25rem);
-    box-shadow: -0.25rem 0.25rem 0 #282a2a;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem 0 #4d4d4d;
   }
 
   /* 마우스 호버 시 글씨가 사라지고 아이콘이 나타나는 애니메이션 */
@@ -423,5 +437,10 @@ body {
   .frontend-skills-item:hover .skills-icon,
   .design-skills-item:hover .skills-icon {
     opacity: 0;
+  }
+
+  /* 마우스 호버 시 배경색 변경 */
+  .contact-box:hover {
+    background-color: #efebe9;
   }
 }
