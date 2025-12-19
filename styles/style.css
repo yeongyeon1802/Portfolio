@@ -64,7 +64,8 @@ p {
 }
 
 span {
-  font-size: clamp(14px, 1.5vw, 2.25rem);
+  font-size: clamp(12px, 1.5vw, 2.25rem);
+  line-height: 1.125;
   font-family: noto-sans, sans-serif;
   font-weight: 400;
 }
@@ -100,7 +101,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: clamp(1rem, 2vw, 3rem);
-  gap: clamp(1rem, 2vw, 3rem);
+  gap: clamp(1.25rem, 2.5vw, 3.75rem);
   background-color: #d6e6f5;
 }
 
@@ -371,6 +372,44 @@ body {
 
 /* 태블릿 사이즈 */
 @media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: clamp(24px, 6vw, 6rem);
+  }
+
+  h2 {
+    font-size: clamp(16px, 3vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(14px, 2.4vw, 2.4rem);
+  }
+
+  h4 {
+    font-size: clamp(14px, 2.4vw, 2.4rem);
+  }
+
+  p {
+    font-size: clamp(14px, 2.4vw, 2.4rem);
+  }
+
+  span {
+    font-size: clamp(14px, 1.5vw, 2.25rem);
+  }
+
+  .contact-item img {
+    width: clamp(1.5rem, 4vw, 4.5rem);
+    height: clamp(1.5rem, 4vw, 4.5rem);
+  }
+
+  .contact-info {
+    font-size: clamp(0.9rem, 2.7vw, 2.7rem);
+  }
+
+  .my-job {
+    font-size: clamp(0.75rem, 2.25vw, 2.25rem);
+    line-height: 1.5;
+  }
+
   .experience-container,
   .strength-container {
     flex: 1;
